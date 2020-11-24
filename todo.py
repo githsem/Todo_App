@@ -6,7 +6,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/Hallo Welt/Documents/G
 db = SQLAlchemy(app)
 
 
-@app.route("/")
+@app.route("/ ")
 def index():
     todos = Todo.query.all()
     return render_template("index.html", todos=todos)
